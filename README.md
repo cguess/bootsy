@@ -37,7 +37,7 @@
 
 3. Run the install generator:
   ```console
-  rails generate bootsy:install
+  bundle exec rails generate bootsy:install
   ```
   It will include the javascripts and stylesheets in the assets pipeline,
   create the `bootsy.rb` initializer and add a copy of the english translations.
@@ -48,8 +48,8 @@
 
 4. Add and run migrations:
   ```console
-  rake bootsy:install:migrations
-  rake db:migrate
+  bundle exec rake bootsy:install:migrations
+  bundle exec rake db:migrate
   ```
 
 
@@ -143,12 +143,15 @@ the options as you like.
 
 ## I18n
 
-Bootsy defines some i18n keys. English translations are added by default to your
+Bootsy defines some I18n keys. English translations are added by default to your
 `config/locales` directory as `bootsy.en.yml`. You can use it as a template
 to translate Bootsy to your language.
 [Here are some examples](https://github.com/volmer/bootsy/tree/master/config/locales).
-You also need to translate Bootsy's javascript messages. Just follow
-[this example](https://github.com/volmer/bootsy/blob/master/app/assets/javascripts/bootsy/locales/pt-BR.js).
+
+You also need to translate Bootsy on the JavaScript side. Just follow
+[this example](https://github.com/volmer/bootsy/blob/master/app/assets/javascripts/bootsy/locales/en.js).
+Bootsy will try to guess the locale based on the `lang` attribute of the page's `<html>` tag.
+You can set the locale directly by setting a `data-bootsy-locale` attribute on your `<textarea>`.
 
 
 ## License
