@@ -14889,6 +14889,7 @@ function program17(depth0,data) {
       shortcuts: {
         '83': 'small',// S
         '75': 'createLink'// K
+        '67': 'copy'// C
       }
     };
 

@@ -4,6 +4,7 @@ window.Bootsy = window.Bootsy || {};
 // Public: Intialize Bootsy editors in all visible `textarea`
 //         elements that has the `bootsy_text_area` class.
 Bootsy.init = function() {
+
   if (!Bootsy.areas) {
     Bootsy.areas = {};
   }
